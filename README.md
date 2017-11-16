@@ -8,6 +8,7 @@ Clone, run, fork and modify!
 git clone https://github.com/tourunen/simple-bottle.git
 
 # Create a new project for testing
+# (Don't actually use oc-in-bottle. Come up with your own unique name. You can do it!)
 oc new-project oc-in-a-bottle
 
 # Create the application, check the build logs 
