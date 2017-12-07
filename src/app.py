@@ -28,7 +28,7 @@ def server_static(path):
 
 
 @route('/healthz')
-def health():
+def healthz():
     """
     Status endpoint for health checks
     """
