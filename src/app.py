@@ -1,5 +1,5 @@
 # import key pieces from bottle package
-from bottle import route, run, static_file
+from bottle import route, run, static_file, redirect
 # import os for reading environment variables
 import os
 
@@ -14,15 +14,15 @@ def get_static_root():
 @route('/')
 def root_page():
     """
-    Route for root path, just try to return index.html
+    Route for root path, just try to redirect to static/index.html
     """
-    return static_file('/index.html', get_static_root())
+    redirect('/static/index.html')
 
 
 @route('/static/<path:path>')
 def server_static(path):
     """
-    Any path not defined more specifically is handled as static content
+    Serve static content under /static
     """
     return static_file(path, get_static_root())
 
